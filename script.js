@@ -53,8 +53,13 @@ document.addEventListener('DOMContentLoaded', () => {
         // Highlight con retardo mínimo
         setTimeout(() => {
           div.classList.add('highlight');
-          setTimeout(() => div.classList.remove('highlight'), 1100);
-        }, 20);
+          setTimeout(() => div.classList.remove('highlight'), 1200);
+        }, 30);
+
+        // Scroll suave al nuevo paso
+        setTimeout(() => {
+          div.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }, 100);
       } else {
         e.target.textContent = '✅ Finalizado';
         e.target.disabled = true;
@@ -63,5 +68,6 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Inicial
-  document.querySelector('#prop-subtabs .subtab').click();
+  const firstPropTab = document.querySelector('#prop-subtabs .subtab');
+  if (firstPropTab) firstPropTab.click();
 });

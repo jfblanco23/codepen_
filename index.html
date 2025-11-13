@@ -124,7 +124,7 @@
         <button class="subtab" data-target="ej-7">Ejercicio 7</button>
       </div>
 
-      <!-- Ejercicios (copiados literal del PDF) -->
+      <!-- Ejercicios -->
       <div class="subcontent active" id="ej-1">
         <h3>Ejercicio 1</h3>
         <div class="enunciado">$ 2^x + 2^{1-x} = 3 $</div>
@@ -228,17 +228,24 @@
       </div>
 
       <div class="subcontent" id="ej-7">
-        <h3>Ejercicio 7</h3>
+        <h3>Ejercicio 7 ✅ CORREGIDO</h3>
         <div class="enunciado">$ 2^{x/2} + 2^x = 6 $</div>
         <div class="steps-container" data-steps='[
           "$ 2^{x/2} + 2^x = 6 $",
-          "Sea $ t = 2^{x/2} $, entonces $ 2^x = (2^{x/2})^2 = t^2 $, y la ecuación es:",
-          "$ t + t^2 = 6 $",
-          "$ \\implies t^2 + t - 6 = 0 $",
+          "Sea $ u = 2^{x/2} $, entonces $ 2^x = (2^{x/2})^2 = u^2 $",
+          "La ecuación queda:",
+          "$ u + u^2 = 6 $",
+          "$ \\implies u^2 + u - 6 = 0 $",
+          "Factorizando:",
+          "$ (u + 3)(u - 2) = 0 $",
           "Soluciones:",
-          "$ t = 2 \\quad \\text{o} \\quad t = -3 \\, (\\text{descartada}) $",
-          "Por lo que,",
-          "$ 2^{x/2} = 2 \\implies x/2 = 1 \\implies x = 2 $."
+          "$ u = -3 \\quad (\\text{descartada, ya que } 2^{x/2} > 0) $",
+          "$ u = 2 $",
+          "Por lo tanto:",
+          "$ 2^{x/2} = 2 $",
+          "$ \\implies \\dfrac{x}{2} = 1 $",
+          "$ \\implies x = 2 $",
+          "Verificación: $ 2^{2/2} + 2^2 = 2^1 + 4 = 2 + 4 = 6 $ ✓"
         ]'></div>
         <button class="btn-step">Mostrar paso siguiente</button>
       </div>
