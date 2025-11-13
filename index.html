@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ecuaciones Exponenciales | Paso a Paso</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <!-- MathJax 3 -->
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        processEscapes: true,
+        packages: {'[+]': ['ams']}
+      },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Ecuaciones Exponenciales</h1>
+    <p>Método paso a paso • Cambio de variable $ t = a^x $</p>
+  </header>
+
+  <!-- Pestañas principales -->
+  <nav class="main-tabs">
+    <button class="main-tab active" data-target="propiedades">Propiedades</button>
+    <button class="main-tab" data-target="ejercicios">Ejercicios</button>
+  </nav>
+
+  <main class="container">
+    <!-- === PROPIEDADES (con pestañas "Propiedad 1", etc.) === -->
+    <section id="propiedades" class="content active">
+      <div class="subtabs" id="prop-subtabs">
+        <button class="subtab active" data-target="prop-1">Propiedad 1</button>
+        <button class="subtab" data-target="prop-2">Propiedad 2</button>
+        <button class="subtab" data-target="prop-3">Propiedad 3</button>
+        <button class="subtab" data-target="prop-4">Propiedad 4</button>
+        <button class="subtab" data-target="prop-5">Propiedad 5</button>
+        <button class="subtab" data-target="prop-6">Propiedad 6</button>
+      </div>
+
+      <!-- Subcontenido de propiedades — EN LÍNEA -->
+      <div class="subcontent active" id="prop-1">
+        <h3>Desarrollo de $ 2^{x+1} $ con $ t = 2^x $</h3>
+        <div class="steps-inline" data-steps='[
+          "$ 2^{x+1} $",
+          "$ = 2^x \\cdot 2 $",
+          "$ = 2t $"
+        ]'></div>
+        <button class="btn-step">Mostrar paso siguiente</button>
+      </div>
+
+      <div class="subcontent" id="prop-2">
+        <h3>Desarrollo de $ 2^{x-1} $ con $ t = 2^x $</h3>
+        <div class="steps-inline" data-steps='[
+          "$ 2^{x-1} $",
+          "$ = \\dfrac{2^x}{2} $",
+          "$ = \\dfrac{t}{2} $"
+        ]'></div>
+        <button class="btn-step">Mostrar paso siguiente</button>
+      </div>
+
+      <div class="subcontent" id="prop-3">
+        <h3>Desarrollo de $ 2^{2x} $ con $ t = 2^x $</h3>
+        <div class="steps-inline" data-steps='[
+          "$ 2^{2x} $",
+          "$ = (2^x)^2 $",
+          "$ = t^2 $"
+        ]'></div>
+        <button class="btn-step">Mostrar paso siguiente</button>
+      </div>
+
+      <div class="subcontent" id="prop-4">
+        <h3>Desarrollo de $ 4^x $ con $ t = 2^x $</h3>
+        <div class="steps-inline" data-steps='[
+          "$ 4^x $",
+          "$ = (2^2)^x $",
+          "$ = 2^{2x} $",
+          "$ = (2^x)^2 $",
+          "$ = t^2 $"
+        ]'></div>
+        <button class="btn-step">Mostrar paso siguiente</button>
+      </div>
+
+      <div class="subcontent" id="prop-5">
+        <h3>Desarrollo de $ 2^{2x-3} $ con $ t = 2^x $</h3>
+        <div class="steps-inline" data-steps='[
+          "$ 2^{2x-3} $",
+          "$ = \\dfrac{2^{2x}}{2^3} $",
+          "$ = \\dfrac{(2^x)^2}{8} $",
+          "$ = \\dfrac{t^2}{8} $"
+        ]'></div>
+        <button class="btn-step">Mostrar paso siguiente</button>
+      </div>
+
+      <div class="subcontent" id="prop-6">
+        <h3>Desarrollo de $ 4^{x+1} $ con $ t = 2^x $</h3>
+        <div class="steps-inline" data-steps='[
+          "$ 4^{x+1} $",
+          "$ = (2^2)^{x+1} $",
+          "$ = 2^{2x+2} $",
+          "$ = 2^{2x} \\cdot 2^2 $",
+          "$ = (2^x)^2 \\cdot 4 $",
+          "$ = 4t^2 $"
+        ]'></div>
+        <button class="btn-step">Mostrar paso siguiente</button>
+      </div>
+    </section>
+
+    <!-- === EJERCICIOS (pestaña por ejercicio) === -->
+    <section id="ejercicios" class="content">
+      <div class="subtabs" id="ej-subtabs">
+        <button class="subtab active" data-target="ej-1">Ejercicio 1</button>
+        <button class="subtab" data-target="ej-2">Ejercicio 2</button>
+        <button class="subtab" data-target="ej-3">Ejercicio 3</button>
+        <button class="subtab" data-target="ej-4">Ejercicio 4</button>
+        <button class="subtab" data-target="ej-5">Ejercicio 5</button>
+        <button class="subtab" data-target="ej-6">Ejercicio 6</button>
+        <button class="subtab" data-target="ej-7">Ejercicio 7</button>
+      </div>
+
+      <!-- Ejercicios (copiados literal del PDF) -->
+      <div class="subcontent active" id="ej-1">
+        <h3>Ejercicio 1</h3>
+        <div class="enunciado">$ 2^x + 2^{1-x} = 3 $</div>
+        <div class="steps-container" data-steps='[
+          "$ 2^x + 2^{1-x} = 3 $",
+          "Sea $ t = 2^x $. Entonces:",
+          "$ t + \\dfrac{2}{t} = 3 $",
+          "$ \\implies t^2 - 3t + 2 = 0 $",
+          "De donde $ t = 1 $ o $ t = 2 $.",
+          "Como $ t = 2^x $, se tiene:",
+          "$ 2^x = 1 \\implies x = 0 $,",
+          "$ 2^x = 2 \\implies x = 1 $."
+        ]'></div>
+        <button class="btn-step">Mostrar paso siguiente</button>
+      </div>
+
+      <div class="subcontent" id="ej-2">
+        <h3>Ejercicio 2</h3>
+        <div class="enunciado">$ 2^{x+1} + 2^{x-1} = \\dfrac{5}{2} $</div>
+        <div class="steps-container" data-steps='[
+          "$ 2^{x+1} + 2^{x-1} = \\dfrac{5}{2} $",
+          "Sea $ t = 2^x $:",
+          "$ 2t + \\dfrac{t}{2} = \\dfrac{5}{2} $",
+          "$ \\implies \\dfrac{5t}{2} = \\dfrac{5}{2} $",
+          "$ \\implies t = 1 \\implies x = 0 $."
+        ]'></div>
+        <button class="btn-step">Mostrar paso siguiente</button>
+      </div>
+
+      <div class="subcontent" id="ej-3">
+        <h3>Ejercicio 3</h3>
+        <div class="enunciado">$ 8^{1+x} + 2^{3x-1} = \\dfrac{17}{16} $</div>
+        <div class="steps-container" data-steps='[
+          "$ 8^{1+x} + 2^{3x-1} = \\dfrac{17}{16} $",
+          "Notemos que $ 8 = 2^3 $, luego",
+          "$ 8^{1+x} = 2^{3(1+x)} = 2^{3 + 3x} $",
+          "Sea $ t = 2^x $, entonces",
+          "$ 2^{3}t^{3} + \\dfrac{t^3}{2} = \\dfrac{17}{16} $",
+          "$ \\implies 8t^{3} + \\dfrac{t^3}{2} = \\dfrac{17}{16} $",
+          "Multiplicamos todo por 16:",
+          "$ 128 t^3 + 8 t^3 = 17 $",
+          "$ \\implies 136 t^3 = 17 $",
+          "$ \\implies t^3 = \\dfrac{17}{136} = \\dfrac{1}{8} $",
+          "Por lo tanto,",
+          "$ t = \\dfrac{1}{2} \\implies 2^{x} = \\dfrac{1}{2} \\implies x = -1 $."
+        ]'></div>
+        <button class="btn-step">Mostrar paso siguiente</button>
+      </div>
+
+      <div class="subcontent" id="ej-4">
+        <h3>Ejercicio 4</h3>
+        <div class="enunciado">$ 2^{2x} - 5 \\cdot 2^x + 4 = 0 $</div>
+        <div class="steps-container" data-steps='[
+          "$ 2^{2x} - 5 \\cdot 2^x + 4 = 0 $",
+          "Sea $ t = 2^x $, tenemos:",
+          "$ t^2 - 5t + 4 = 0 $",
+          "Soluciones:",
+          "$ t = 1 \\quad \\text{o} \\quad t = 4 $",
+          "Por lo tanto,",
+          "$ 2^x = 1 \\implies x = 0 $,",
+          "$ 2^x = 4 \\implies x = 2 $."
+        ]'></div>
+        <button class="btn-step">Mostrar paso siguiente</button>
+      </div>
+
+      <div class="subcontent" id="ej-5">
+        <h3>Ejercicio 5</h3>
+        <div class="enunciado">$ 9^x - 3^x - 6 = 0 $</div>
+        <div class="steps-container" data-steps='[
+          "$ 9^x - 3^x - 6 = 0 $",
+          "Como $ 9 = 3^2 $, sea $ t = 3^x $:",
+          "$ t^2 - t - 6 = 0 $",
+          "Soluciones:",
+          "$ t = 3 \\quad \\text{o} \\quad t = -2 \\quad (\\text{descartada}) $",
+          "Luego,",
+          "$ 3^x = 3 \\implies x = 1 $."
+        ]'></div>
+        <button class="btn-step">Mostrar paso siguiente</button>
+      </div>
+
+      <div class="subcontent" id="ej-6">
+        <h3>Ejercicio 6</h3>
+        <div class="enunciado">$ 7^{1+2x} - 50 \\cdot 7^x + 7 = 0 $</div>
+        <div class="steps-container" data-steps='[
+          "$ 7^{1+2x} - 50 \\cdot 7^x + 7 = 0 $",
+          "Sea $ t = 7^x $:",
+          "$ 7 \\cdot t^2 - 50 t + 7 = 0 $",
+          "Dividimos por 7:",
+          "$ t^2 - \\dfrac{50}{7} t + 1 = 0 $",
+          "Solución por fórmula cuadrática:",
+          "$ t = \\dfrac{50/7 \\pm \\sqrt{(50/7)^2 - 4}}{2} $",
+          "Simplificando,",
+          "$ t = \\dfrac{50/7 \\pm \\sqrt{\\dfrac{2500}{49} - 4}}{2} = \\dfrac{50/7 \\pm \\sqrt{\\dfrac{2500 - 196}{49}}}{2} = \\dfrac{50/7 \\pm \\dfrac{\\sqrt{2304}}{7}}{2} $",
+          "$ = \\dfrac{50/7 \\pm \\dfrac{48}{7}}{2} = \\dfrac{50 \\pm 48}{14} $",
+          "Entonces,",
+          "$ t_1 = \\dfrac{98}{14} = 7 $, $\\quad t_2 = \\dfrac{2}{14} = \\dfrac{1}{7} $",
+          "Por tanto,",
+          "$ 7^x = 7 \\implies x = 1 $, $\\quad 7^x = \\dfrac{1}{7} \\implies x = -1 $."
+        ]'></div>
+        <button class="btn-step">Mostrar paso siguiente</button>
+      </div>
+
+      <div class="subcontent" id="ej-7">
+        <h3>Ejercicio 7</h3>
+        <div class="enunciado">$ 2^{x/2} + 2^x = 6 $</div>
+        <div class="steps-container" data-steps='[
+          "$ 2^{x/2} + 2^x = 6 $",
+          "Sea $ t = 2^{x/2} $, entonces $ 2^x = (2^{x/2})^2 = t^2 $, y la ecuación es:",
+          "$ t + t^2 = 6 $",
+          "$ \\implies t^2 + t - 6 = 0 $",
+          "Soluciones:",
+          "$ t = 2 \\quad \\text{o} \\quad t = -3 \\, (\\text{descartada}) $",
+          "Por lo que,",
+          "$ 2^{x/2} = 2 \\implies x/2 = 1 \\implies x = 2 $."
+        ]'></div>
+        <button class="btn-step">Mostrar paso siguiente</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Jesús Blanco | Recurso educativo para Bachillerato</p>
+    <p>Paleta: #008080 | #FDFBD4 | #05472A</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
